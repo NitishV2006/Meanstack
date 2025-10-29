@@ -1,0 +1,17 @@
+@if (isVisible)
+{
+  <button (click)="isVisible= false">Hide List</button>
+}
+@else
+{
+  <button (click)="isVisible= true">Show List</button>
+}
+@if (isVisible)
+{
+  <ul class="list">
+    @for (item of items; track item)
+    {
+      <li class="item">{{item}}</li>
+    }
+  </ul>
+}
